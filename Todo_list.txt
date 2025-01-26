@@ -2,3 +2,4 @@ Dance
 Jump
 Run
 Swim
+Chess
