@@ -46,5 +46,3 @@ while True:
             print("Please type a valid input")
 
 print("Todo list closed.")
-
-
