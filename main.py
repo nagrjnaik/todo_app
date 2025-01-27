@@ -1,7 +1,7 @@
 while True:
     user_action = input("choose add, show, edit, remove or exit: ")
     user_action = user_action.strip().lower()
-    if 'add' in user_action:
+    if user_action.startswith("add"):
         todo = user_action[4:] + '\n'  # string slicing to extract from user input after add
         todo = todo.capitalize()
         with open('Todo_list.txt', 'r') as file:
@@ -10,7 +10,7 @@ while True:
         with open('Todo_list.txt', 'w') as file:
             file.writelines(todos)
 
-    elif 'show' in user_action:
+    elif user_action.startswith("show"):
         with open('Todo_list.txt', 'r') as file:
             todos = file.readlines()
         # list comprehension -- same as below code
@@ -19,7 +19,7 @@ while True:
             item = item.strip('\n')
             print(f"{index + 1}. {item}")
 
-    elif 'edit' in user_action:
+    elif user_action.startswith("edit"):
         with open('Todo_list.txt', 'r') as file:
             todos = file.readlines()
         number = int(user_action[5:])
@@ -29,7 +29,7 @@ while True:
         with open('Todo_list.txt', 'w') as file:
             file.writelines(todos)
 
-    elif 'remove' in user_action:
+    elif user_action.startswith("remove"):
         with open('Todo_list.txt', 'r') as file:
             todos = file.readlines()
         number = int(user_action[7:])
@@ -37,7 +37,7 @@ while True:
         with open('Todo_list.txt', 'w') as file:
             file.writelines(todos)
 
-    elif 'exit' in user_action:
+    elif user_action.startswith("exit"):
         break
 
     else:
