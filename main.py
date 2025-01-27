@@ -20,22 +20,30 @@ while True:
             print(f"{index + 1}. {item}")
 
     elif user_action.startswith("edit"):
-        with open('Todo_list.txt', 'r') as file:
-            todos = file.readlines()
-        number = int(user_action[5:])
-        number = number - 1 #adjust for indexing
-        new_todo = input("Enter a new todo: ") + '\n'
-        todos[number] = new_todo.capitalize()
-        with open('Todo_list.txt', 'w') as file:
-            file.writelines(todos)
+        try:
+            with open('Todo_list.txt', 'r') as file:
+                todos = file.readlines()
+            number = int(user_action[5:])
+            number = number - 1 #adjust for indexing
+            new_todo = input("Enter a new todo: ") + '\n'
+            todos[number] = new_todo.capitalize()
+            with open('Todo_list.txt', 'w') as file:
+                file.writelines(todos)
+        except ValueError:
+            print("Your command is not valid.")
+            continue  # opposite of break! restarts the code cycle from top
 
     elif user_action.startswith("remove"):
-        with open('Todo_list.txt', 'r') as file:
-            todos = file.readlines()
-        number = int(user_action[7:])
-        todos.pop(number - 1)
-        with open('Todo_list.txt', 'w') as file:
-            file.writelines(todos)
+        try:
+            with open('Todo_list.txt', 'r') as file:
+                todos = file.readlines()
+            number = int(user_action[7:])
+            todos.pop(number - 1)
+            with open('Todo_list.txt', 'w') as file:
+                file.writelines(todos)
+        except IndexError:
+            print("There is no item with that number.")
+            continue
 
     elif user_action.startswith("exit"):
         break
