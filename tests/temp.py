@@ -1,9 +1,9 @@
-user_entries = ['10', '19.1', '20']
-
-# Convert all entries to float
-new = [float(items) for items in user_entries]
-
-# Double each item
-new1 = [items + items for items in new]
-
-print(new1)
+try:
+    total_value = float(input("Enter total value: "))
+    value = float(input("Enter value: "))
+    percentage = value/total_value * 100
+    print(f"That is {percentage}%")
+except ZeroDivisionError:
+    print("Your total value cannot be zero.")
+except ValueError:
+    print("You need to enter a number. Run the program again")
