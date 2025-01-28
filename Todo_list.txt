@@ -1,5 +1,3 @@
-Wake up at 6am
-Go for a walk
-Eat breakfast
-Study
-Login to work
+Python
+Dance
+Aws
