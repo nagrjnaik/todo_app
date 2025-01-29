@@ -25,5 +25,3 @@ if all(result):
     print("Strong Password")
 else:
     print("Weak password")
-
-
