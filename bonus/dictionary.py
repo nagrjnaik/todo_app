@@ -1,5 +1,3 @@
-from os.path import isdir
-
 password = input("Enter a password: ")
 result = {}
 
