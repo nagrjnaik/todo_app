@@ -1,4 +1,7 @@
-def get_todos(filepath='Todo_list.txt'):
+FILEPATH = 'Todo_list.txt'
+
+
+def get_todos(filepath=FILEPATH):
     """
     Reads the text file and returns the items in a list
     this space called as doc string
@@ -11,7 +14,7 @@ def get_todos(filepath='Todo_list.txt'):
         return todos_local
 
 
-def write_todos(todos_arg, filepath='Todo_list.txt'):
+def write_todos(todos_arg, filepath=FILEPATH):
     with open(filepath, 'w') as file_local:
         file_local.writelines(todos_arg)
 
