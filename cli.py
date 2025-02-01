@@ -1,7 +1,6 @@
 from time import strftime
 
 from functions import get_todos, write_todos
-import datetime
 
 now = strftime("%b %d, %Y %H:%M:%S")
 print("It is",now)
