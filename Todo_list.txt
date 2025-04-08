@@ -1,5 +1,0 @@
-Learn Python
-Find out about streamlit library
-upload the code to the cloud and host it
-commit the changes
-push to GitHub
