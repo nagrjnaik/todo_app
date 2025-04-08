@@ -1,3 +1,6 @@
+#To run this webapp you should use the below command in terminal
+# streamlit run D:\Studies\pyBootCamp\todo_app\webapp.py
+
 import streamlit as st
 from streamlit import session_state
 
